@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Icono de ubicación/pin centrado en la zona segura -->
+    <path
+        android:fillColor="#1A73E8"
+        android:pathData="M54,30 C44.06,30 36,38.06 36,48 C36,61.5 54,78 54,78 C54,78 72,61.5 72,48 C72,38.06 63.94,30 54,30 Z M54,54 C50.69,54 48,51.31 48,48 C48,44.69 50.69,42 54,42 C57.31,42 60,44.69 60,48 C60,51.31 57.31,54 54,54 Z" />
+</vector>

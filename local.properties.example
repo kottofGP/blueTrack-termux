@@ -1,0 +1,4 @@
+# Configuración usada por el entorno Android en Termux.
+# Copia este archivo como local.properties si no usarás termux-build.sh.
+# No subas local.properties a Git.
+sdk.dir=/data/data/com.termux/files/home/android-sdk
