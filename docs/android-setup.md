@@ -66,3 +66,96 @@ La UI usa:
 - Azul principal `#007CFF`
 - Texto claro `#EFF1F3`
 - Texto secundario `#858D98`
+
+Estado actual de desarrollo
+
+Funcionalidades implementadas y validadas
+
+La versión actual de BlueTrack tiene implementada y probada en un dispositivo Android la siguiente navegación:
+
+Login
+  ↓
+Dashboard
+  ↓
+FleetScreen
+  ↓
+VehicleDetailScreen
+  ↓
+Volver al Dashboard
+
+Componentes principales
+
+- "LoginScreen"
+- "DashboardScreen"
+- "FleetScreen"
+- "VehicleDetailScreen"
+- "LoginViewModel"
+- "FleetViewModel"
+- "LoginViewModelFactory"
+- "FleetViewModelFactory"
+
+Modelos de dominio
+
+- "User"
+- "Session"
+- "Vehicle"
+- "Position"
+
+Interfaces de repositorio
+
+- "AuthRepository"
+- "VehicleRepository"
+- "PositionRepository"
+
+Fuentes de datos actuales
+
+- "MockAuthRepository"
+- "MockVehicleRepository"
+
+Los datos utilizados durante esta etapa son simulados y no representan un contrato real de "systemStar".
+
+Validación en dispositivo
+
+La aplicación fue compilada e instalada correctamente mediante:
+
+./gradlew :app:assembleDebug
+adb install -r app/build/outputs/apk/debug/app-debug.apk
+
+Pruebas funcionales realizadas
+
+1. Login visible — PASS
+2. Login funcional — PASS
+3. Dashboard visible — PASS
+4. Métricas visibles — PASS
+5. Vehículos visibles — PASS
+6. Actualización de vehículos — PASS
+7. Logout y re-login — PASS
+8. Selección de vehículo — PASS
+9. Detalle del vehículo — PASS
+10. Regreso al Dashboard — PASS
+
+Estado de integración con systemStar
+
+La integración real con "systemStar" todavía no ha comenzado.
+
+No se han inventado endpoints REST, modelos JSON, credenciales, eventos WebSocket ni otros contratos de comunicación.
+
+La arquitectura mantiene las interfaces de dominio desacopladas de las implementaciones concretas para permitir posteriormente sustituir los mocks por las implementaciones oficiales de "systemStar".
+
+Próximo objetivo
+
+El siguiente incremento funcional es Position.
+
+Objetivo:
+
+Vehicle
+  ↓
+PositionRepository
+  ↓
+MockPositionRepository
+  ↓
+VehicleDetailScreen
+
+Posteriormente, la posición podrá alimentar la abstracción del proveedor de mapas.
+
+La integración real con "systemStar" queda pendiente hasta disponer y verificar su contrato oficial.
